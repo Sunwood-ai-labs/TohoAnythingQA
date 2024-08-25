@@ -1,0 +1,3 @@
+[submodule "Neo4j-docker-starter"]
+	path = Neo4j-docker-starter
+	url = https://github.com/Sunwood-ai-labs/Neo4j-docker-starter.git

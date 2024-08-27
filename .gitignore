@@ -165,3 +165,13 @@ tmp2.md
 .Prothiel.md
 .Gaiah.md
 .SourceSageAssets
+neo4j_data
+data/fin/東方地霊殿_東方地霊殿_〜_Subterranean_Animism..txt
+data/raw/東方紅魔館_十六夜咲夜.txt
+data/raw/東方紅魔館_東方紅魔郷_〜_the_Embodiment_of_Scarlet_Devil..txt
+neo4j_import/all.json
+neo4j_import/all2.json
+neo4j_import/blocks_mini.json
+neo4j_import/blocks.json
+neo4j_import/neo4j_blocks.json
+poetry.lock

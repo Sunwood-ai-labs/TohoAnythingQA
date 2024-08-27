@@ -9,7 +9,9 @@ services:
     environment:
       - NEO4J_AUTH=neo4j/your_password
       - NEO4J_PLUGINS=["apoc"]
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_apoc_import_file_use__neo4j__config=true
     volumes:
-      - neo4j_data1:/data
-volumes:
-  neo4j_data1:
+      - ./neo4j_data:/data
+      - ./neo4j_import:/var/lib/neo4j/import

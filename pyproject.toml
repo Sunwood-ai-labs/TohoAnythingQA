@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "tohoanythingqa"
+version = "0.1.0"
+description = ""
+authors = ["Maki <sunwood.ai.labs@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+langchain = "^0.2.14"
+langchain-community = "^0.2.12"
+wikipedia = "^1.4.0"
+loguru = "^0.7.2"
+beautifulsoup4 = "^4.12.3"
+python-dotenv = "^1.0.1"
+langchain-openai = "^0.1.22"
+langchain-experimental = "^0.0.64"
+neo4j = "^5.23.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

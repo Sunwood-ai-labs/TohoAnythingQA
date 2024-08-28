@@ -20,8 +20,9 @@
 
 - 東方Project関連の広範な知識を網羅
 - Neo4jを使用した効率的な知識グラフ
-- 美しい3Dグラフ可視化
-- LLMを活用した高度な質問応答機能
+- Three.jsとForce Graph 3Dを使用した美しい3Dグラフ可視化
+- LLM（GPT-4）を活用した高度な質問応答機能
+- Wikipediaからの自動データ抽出機能
 
 ## 📦 インストール
 
@@ -41,7 +42,11 @@ docker-compose up -d
 ```
 
 4. 環境変数を設定します：
-`.env`ファイルを作成し、必要な環境変数を設定してください。
+`.env`ファイルを作成し、以下の環境変数を設定してください：
+- NEO4J_URI
+- NEO4J_USERNAME
+- NEO4J_PASSWORD
+- OPENAI_API_KEY
 
 ## 🖥 使用方法
 
@@ -68,15 +73,31 @@ python server.py
 TohoAnythingQA/
 ├─ modules/
 │  ├─ data_extraction/
+│  │  ├─ wiki_scraper.py
+│  │  └─ data_cleaner.py
 │  ├─ graph_rag/
+│  │  ├─ graph_builder.py
+│  │  └─ neo4j_manager.py
 │  ├─ visualization/
+│  │  └─ graph_renderer.py
 │  └─ main.py
 ├─ visual/
+│  ├─ galaxy-graph.js
+│  ├─ galaxy-neo4j-graph.js
+│  ├─ index.html
+│  └─ index_neo4j.html
 ├─ docker-compose.yml
 ├─ pyproject.toml
 ├─ README.md
 └─ server.py
 ```
+
+## 🆕 v0.1.0の主な更新内容
+
+- Wikipediaからの東方Project関連情報の自動抽出機能を実装
+- Neo4jグラフデータベースの構築とLLMGraphTransformerによるテキストデータのグラフ構造への変換
+- Three.jsとForce Graph 3Dを使用したインタラクティブな3Dグラフ可視化の実現
+- シンプルなHTTPサーバーの実装によるローカル環境でのグラフ表示
 
 ## 🤝 コントリビューション
 
@@ -98,3 +119,18 @@ TohoAnythingQA/
 ## 📞 お問い合わせ
 
 質問や提案がある場合は、[Issueを作成](https://github.com/Sunwood-ai-labs/TohoAnythingQA/issues/new)してください。
+
+## 🚧 注意事項
+
+- 現在のバージョンは開発段階であり、機能が限定的である可能性があります。
+- 適切な環境変数の設定（Neo4jの接続情報、OpenAI APIキーなど）が必要です。
+- 大量のデータを処理する際は、システムのリソース使用量に注意してください。
+
+## 🔮 今後の計画
+
+- クエリ機能の強化
+- ユーザーインターフェースの改善
+- より多くの東方Project関連データの統合
+- パフォーマンスの最適化
+
+皆様のフィードバックを歓迎し、今後のバージョンでさらなる機能拡張を予定しています。
